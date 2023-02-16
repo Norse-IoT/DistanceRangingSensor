@@ -90,7 +90,7 @@ void peopleCounterTaskFunction(void * pvParameters) {
   lidarSensor.setIntermeasurementPeriod(100);
   lidarSensor.setDistanceModeLong();
 
-  delay(1000);
+  // delay(5000);
   // Calculate threshold amounts for zones
   define_threshold();
   // Loop
@@ -122,7 +122,7 @@ void publishDataTaskFunction(void * pvParameters) {
   // Loop
   while (1) {
     // Wait 5 minutes before publishing data
-     delay(1000);
+     delay(3000);
     // Build json
     // String json = "{\"total\":";
     // json += String(peopleInRoom);
@@ -146,7 +146,7 @@ void publishDataTaskFunction(void * pvParameters) {
 
 // Utility functions
 void define_threshold() {
-  delay(500);
+  // delay(500);
   Zone = 0;
   float sum_zone_0 = 0;
   float sum_zone_1 = 0;
@@ -193,6 +193,9 @@ void handlePersonPassage(int zone) {
     Serial.println("Out");
     change = -1;
     peopleInRoom--;
+    if(peopleInRoom < 0){
+      peopleInRoom = 0;
+    }
   } else if (zone == 2) {
     Serial.println("In");
     change = 1;

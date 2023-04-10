@@ -55,8 +55,8 @@ TaskHandle_t PublishDataTaskHandler;
 
 
 #define EAP_ANONYMOUS_IDENTITY "anonymous@example.com" //anonymous identity, leave as anonymous@example.com
-#define EAP_IDENTITY "paredesg1" //user name
-#define EAP_PASSWORD "Carlosjimbo2023!" // user password
+#define EAP_IDENTITY "enter user" //user name
+#define EAP_PASSWORD "enter password" // user password
 const char* ssid = "NORSE_NET"; // SSID
 const char* host = "iot.informatics.plus"; //external server domain for HTTPS connection
 const int port = 443;

@@ -6,7 +6,8 @@
   GND -> GND
 */
 
-//WebSite: https://thingspeak.com/channels/2083854
+//Door WebSite: https://thingspeak.com/channels/2083854
+//In room esp: https://thingspeak.com/channels/2120323
 
 #include <Wire.h>
 #include "SparkFun_VL53L1X.h"
